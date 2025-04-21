@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "ru-RU" }}">
+  <head>
+    <title>Главная | Leak OSINT</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Leak, OSINT, Телеграм, бот, Поиск, информации, Открытые, источники, Закрытые, источники, Персональные, данные, Защита, аккаунтов, Утечка, данных, Узнать, утечку, данных, Восстановление, паролей, Определение, звонков, Поиск, владельца, автомобиля, Вернуть, потерянные, документы, Вычисление, спамера, Поиск, родственников, Количество, владельцев, автомобиля, аудитории, пользователи, боты, Устойчивость, взлому, Базы, данных, США, Канада, Япония, Китай, Постсоветские, страны, Россия, Казахстан, Украина, Беларусь, Бесплатный"/>
+    <meta name="description" content="Телеграм бот для поиска информации по открытым и закрытым источникам персональных данных. Боты умеет пробивать информации по номеру телефона, номеру автомобиля, паспорту и т.д">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="{{ '/' | absolute_url }}">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        </a>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+        {% if site.github.is_project_page %}
+          <a href="https://leakosint.xyz/LeakOSINT/" class="button"><small>Перейти в </small> Бота</a>
+        {% endif %}
+        {% if site.github.is_user_page %}
+          <a href="https://leakosint.xyz/LeakOSINT/" class="button"><small>Перейти в </small> Бота</a>
+        {% endif %}
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          {{ content }}
+        </section>
+        <aside id="sidebar">
+          {% if site.show_downloads %}
+            <a href="{{ site.github.zip_url }}" class="button">
+              <small>Download</small>
+              .zip file
+            </a>
+            <a href="{{ site.github.tar_url }}" class="button">
+              <small>Download</small>
+              .tar.gz file
+            </a>
+          {% endif %}
+
+
+          </aside>
+      </div>
+    </div>
+
+  </body>
+</html>
