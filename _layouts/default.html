@@ -24,20 +24,19 @@
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <a href="{{ '/' | absolute_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-        {% if site.github.is_project_page %}
-          <a href="/LeakOSINT.html" class="button"><small>Перейти в </small> Бота</a>
-        {% endif %}
-        {% if site.github.is_user_page %}
-          <a href="/LeakOSINT.html" class="button"><small>Перейти в </small> Бота</a>
-        {% endif %}
-      </div>
-    </header>
+<header>
+  <div class="inner">
+    <a href="{{ '/' | absolute_url }}">
+      <h1>{{ site.title | default: site.github.repository_name }}</h1>
+    </a>
+    <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+    {% if site.github.is_project_page or site.github.is_user_page %}
+      <a href="/LeakOSINT.html" class="button" target="_blank" rel="noopener noreferrer">
+        <small>Перейти в </small> Бота
+      </a>
+    {% endif %}
+  </div>
+</header>
 
     <div id="content-wrapper">
       <div class="inner clearfix">
